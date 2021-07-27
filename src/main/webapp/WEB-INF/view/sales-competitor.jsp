@@ -1,9 +1,10 @@
-<%@include file="../common/header.jspf"%>
+<%@include file="../common/header.jspf" %>
   <section class="content">
+
         <div class="container my-3">
             <div class="row p-3">
                 <div class="welcome">
-                    <h2> Lead Management </h2>
+                    <h2> Competitor Management </h2>
                 </div>
                 <div class="date-block">
                     <div class="navbar navbar-expand-lg navbar-light">
@@ -18,50 +19,31 @@
             <div class="row p-3">
                 <div class="card rounded shadow p-3">
                     <div class="row p-3">
-                        <div class="logo" style="font-size: 25px!important">New Lead</div>
+                        <div class="logo" style="font-size: 25px!important">New Competitor</div>
                     </div>
                     <div class="row p-3">
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="First name">
-                                <label class="text-muted" for="floatingInput ">First name</label>
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Competitor name">
+                                <label class="text-muted" for="floatingInput ">Competitor name</label>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="Last name">
-                                <label class="text-muted" for="floatingInput ">Last name</label>
+                                <input type="text" class="form-control" id="floatingInput" placeholder="competitor field">
+                                <label class="text-muted" for="floatingInput ">Competitor field</label>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="Job">
-                                <label class="text-muted" for="floatingInput ">Job</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating">
-                                <input type="date" class="form-control" id="floatingInput" placeholder="D.O.B">
-                                <label class="text-muted" for="floatingInput ">Date of Birth</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="Phone Number">
-                                <label class="text-muted" for="floatingInput ">Phone number</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput"
-                                    placeholder="Example@gmail.com">
-                                <label class="text-muted" for="floatingInput ">Email</label>
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Opportunity name">
+                                <label class="text-muted" for="floatingInput ">Opportunity name</label>
                             </div>
                         </div>
                         <div class="col-12 ">
                             <div class="form-floating">
                                 <textarea class="form-control" placeholder="Address" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Address</label>
+                                <label class="text-muted" for="floatingTextarea">Competitor details</label>
                             </div>
                         </div>
                         <div class="col-4 my-3 p-3">
@@ -70,14 +52,13 @@
                     </div>
                 </div>
             </div>
-
             <div class="row my-3">
                 <div class="col-12">
                     <div class="card rounded shadow  ">
                         <div class="card-header align-items-center mb-0 ">
                             <div class="row p-3 ">
                                 <div class="col-4">
-                                    <div class="logo" style="font-size: 25px!important">List of Leads</div>
+                                    <div class="logo" style="font-size: 25px!important">List of Competitors</div>
                                 </div>
                                 <div class="col-4">
                                     <div class="search-block">
@@ -126,12 +107,10 @@
                                             <input type="checkbox">
                                         </th>
                                         <th scope="col">No.</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Job</th>
-                                        <th scope="col">D.O.B</th>
-                                        <th scope="col">Phone number</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Address</th>
+                                        <th scope="col">Competitor name</th>
+                                        <th scope="col">Competitor field</th>
+                                        <th scope="col">Competitor description</th>
+                                        <th scope="col">Opportunity name</th>
                                         <th scope="col"></th>
                                        
                                     </tr>
@@ -140,14 +119,12 @@
                                     <tr>
                                         <td><input type="checkbox"></td>
                                         <td>1</td>
-                                        <td><img src="assets/img/dog.jpeg"
-                                            width="30" height="30" class="rounded me-2" alt="...">Ly Hung Phat</td>
-                                        <td>front-end developer</td>
-                                        <td>12/09/2001</td>
-                                        <td>0909123456</td>
-                                        <td>phatly2001@gmail.com</td>
+                                        <td>Tiki</td>
+                                        <td> e-commerce</td>
                                         <td>23/23 Hoa Binh, Tan Phu, hcm city</td>
-                                        
+                                        <td>
+                                           Ly Hung Phat
+                                        </td>
                                         <td>
                                             <a href="#"> <small> Edit </small></a>
                                             <a href="#"> <small> Delete </small></a>
@@ -173,4 +150,4 @@
             </div>
         </div>
     </section>
-<%@include file="../common/footer.jspf"%>
+<%@include file="../common/footer.jspf" %>

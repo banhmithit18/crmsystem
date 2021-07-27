@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* 974e76 */
+/* d87e70 */
 body {
     font-family: "Helvetica Neue",Arial, Helvetica, sans-serif;
     font-size:16px;
@@ -10,6 +12,13 @@ body {
 }
 .rounded {
     border-radius: 1.25em!important;
+}
+.card-header {
+    background-color: transparent;
+    border:none;
+}
+.card-body {
+    padding:0;
 }
 .img-imac{
     height: 50%;
@@ -63,18 +72,38 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.table-responsive{
+    overflow-x: auto;
+    max-height:300px;
+    overflow-y: auto;
+    table-layout: fixed;
+}
+
 .myTable th{
     color:black !important;
     font-weight:500;
-    padding:5px;
     border-bottom: 1px solid rgb(110, 109, 109,0.2);
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    position:sticky;
+    top:0;
+    background:white;
+   
     
 }
+.myTable{
+    width:100%;
+}
+.myTable td,th{
+    white-space: nowrap;
+    padding:25px 25px;
+}
+
 .myTable td{
     color:#6c757d;
     font-size: 14px;
-    padding:20px 5px 10px 5px;
     border-bottom: 1px solid rgb(110, 109, 109,0.2);
+
     
 }
 .myTable td a{
@@ -175,4 +204,4 @@ body {
 .page-link:hover{
     color: #a35480 !important;
 
-}
+} 

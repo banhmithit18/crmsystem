@@ -114,14 +114,14 @@
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" href="/lead">Lead</a></li>
-								<li><a class="dropdown-item" href="#">Opportunities</a></li>
-								<li><a class="dropdown-item" href="#">Account Customer</a></li>
-								<li><a class="dropdown-item" href="#">Contact List</a></li>
-								<li><a class="dropdown-item" href="#">Competitors List</a></li>
-								<li><a class="dropdown-item" href="#">Products</a></li>
-								<li><a class="dropdown-item" href="#">Quotes</a></li>
-								<li><a class="dropdown-item" href="#">Orders</a></li>
-								<li><a class="dropdown-item" href="#">Invoices</a></li>
+								<li><a class="dropdown-item" href="/opportunities">Opportunities</a></li>
+								<li><a class="dropdown-item" href="/account">Account Customer</a></li>
+								<li><a class="dropdown-item" href="/contact">Contact List</a></li>
+								<li><a class="dropdown-item" href="/competitor">Competitors List</a></li>
+								<li><a class="dropdown-item" href="/product">Products</a></li>
+								<li><a class="dropdown-item" href="/quote">Quotes</a></li>
+								<li><a class="dropdown-item" href="/order">Orders</a></li>
+								<li><a class="dropdown-item" href="/invoice">Invoices</a></li>
 							</ul></li>
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#"

@@ -1,9 +1,10 @@
-<%@include file="../common/header.jspf"%>
-  <section class="content">
+<%@include file="../common/header.jspf" %>
+ <section class="content">
         <div class="container my-3">
+            
             <div class="row p-3">
                 <div class="welcome">
-                    <h2> Lead Management </h2>
+                    <h2>Contact Management </h2>
                 </div>
                 <div class="date-block">
                     <div class="navbar navbar-expand-lg navbar-light">
@@ -15,69 +16,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row p-3">
-                <div class="card rounded shadow p-3">
-                    <div class="row p-3">
-                        <div class="logo" style="font-size: 25px!important">New Lead</div>
-                    </div>
-                    <div class="row p-3">
-                        <div class="col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="First name">
-                                <label class="text-muted" for="floatingInput ">First name</label>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="Last name">
-                                <label class="text-muted" for="floatingInput ">Last name</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="Job">
-                                <label class="text-muted" for="floatingInput ">Job</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating">
-                                <input type="date" class="form-control" id="floatingInput" placeholder="D.O.B">
-                                <label class="text-muted" for="floatingInput ">Date of Birth</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="Phone Number">
-                                <label class="text-muted" for="floatingInput ">Phone number</label>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput"
-                                    placeholder="Example@gmail.com">
-                                <label class="text-muted" for="floatingInput ">Email</label>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Address" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Address</label>
-                            </div>
-                        </div>
-                        <div class="col-4 my-3 p-3">
-                            <a href="#" class=" btn myBtn rounded "> <i class="bi bi-check2-circle"></i> Submit </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="row my-3">
                 <div class="col-12">
                     <div class="card rounded shadow  ">
                         <div class="card-header align-items-center mb-0 ">
                             <div class="row p-3 ">
                                 <div class="col-4">
-                                    <div class="logo" style="font-size: 25px!important">List of Leads</div>
+                                    <div class="logo" style="font-size: 25px!important">Contact List</div>
                                 </div>
                                 <div class="col-4">
                                     <div class="search-block">
@@ -129,8 +74,7 @@
                                         <th scope="col">Name</th>
                                         <th scope="col">Job</th>
                                         <th scope="col">D.O.B</th>
-                                        <th scope="col">Phone number</th>
-                                        <th scope="col">Email</th>
+                                        <th scope="col">Contact</th>
                                         <th scope="col">Address</th>
                                         <th scope="col"></th>
                                        
@@ -144,8 +88,10 @@
                                             width="30" height="30" class="rounded me-2" alt="...">Ly Hung Phat</td>
                                         <td>front-end developer</td>
                                         <td>12/09/2001</td>
-                                        <td>0909123456</td>
-                                        <td>phatly2001@gmail.com</td>
+                                        <td>
+                                            <span><i class="bi bi-telephone"> 0909123456 </i> </span> <br>
+                                            <span><i class="bi bi-envelope"> phatly2001@gmail.com </i></span>
+                                        </td>
                                         <td>23/23 Hoa Binh, Tan Phu, hcm city</td>
                                         
                                         <td>
@@ -171,6 +117,7 @@
                     </div>
                 </div>
             </div>
+           
         </div>
     </section>
-<%@include file="../common/footer.jspf"%>
+<%@include file="../common/footer.jspf" %>
