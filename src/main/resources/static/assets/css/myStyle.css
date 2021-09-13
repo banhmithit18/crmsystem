@@ -205,3 +205,20 @@ body {
     color: #a35480 !important;
 
 } 
+/* Make table scroll*/
+.scroll{
+		overflow: scroll;
+	max-height: 400px;
+}
+/* Make button look like a link*/
+.button-link{
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -32,6 +32,14 @@ public class account {
 	private List<contract> contract;
 	private List<order> order;
 
+	public account() {
+		
+	}
+	
+	public account(int id) {
+		leadId = id;
+	}
+
 	//join order
 	@OneToMany(mappedBy = "account")
 	public List<order> getOrder() {

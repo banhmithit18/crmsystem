@@ -31,7 +31,7 @@ public class opportunitylead {
 	// join opportunity
 	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "opportunity_id", referencedColumnName = "opportunity_id", insertable = false, updatable = false)
+	@JoinColumn(name = "opportunity_id", referencedColumnName = "opportunity_id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	public opportunity getOpportunity() {
 		return opportunity;
@@ -44,7 +44,7 @@ public class opportunitylead {
 	// join lead
 	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "lead_id", referencedColumnName = "lead_id", insertable = false, updatable = false)
+	@JoinColumn(name = "lead_id", referencedColumnName = "lead_id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	public lead getLead() {
 		return lead;
@@ -54,7 +54,7 @@ public class opportunitylead {
 		this.lead = lead;
 	}
 
-	@Column(name = "opportunity_id", nullable = true)
+	@Column(name = "opportunity_id", nullable = true, insertable = false, updatable = false)
 	public int getOpportunityId() {
 		return opportunityId;
 	}
@@ -63,7 +63,7 @@ public class opportunitylead {
 		this.opportunityId = opportunityId;
 	}
 
-	@Column(name = "lead_id", nullable = true)
+	@Column(name = "lead_id", nullable = true,insertable = false, updatable = false)
 	public int getLeadId() {
 		return leadId;
 	}

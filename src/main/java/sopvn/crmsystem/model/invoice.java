@@ -26,12 +26,33 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @EntityListeners(AuditingEntityListener.class)
 public class invoice {
 	private int invoice_id;
-	private int orderId;
 	private Date invoiceDate;
 	
-	private order order;
+	private List<order> order;
 	private List<cases> cases;
 	private List<servicecalendar> servicecalendar;
+	
+	
+	public invoice(Date date)
+	{
+		invoiceDate = date;
+	}
+
+	public invoice(int i) {
+		invoice_id = 0;
+	}
+	public invoice() {
+		
+	}
+	//join order
+	@OneToMany(mappedBy="invoice")
+	public List<order> getOrder() {
+		return order;
+	}
+
+	public void setOrder(List<order> order) {
+		this.order = order;
+	}
 	
 	//join cases
 	@OneToMany(mappedBy="invoice")
@@ -52,19 +73,8 @@ public class invoice {
 		this.servicecalendar = servicecalendar;
 	}
 
-	//join order
-	@JsonIgnore
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "order_id", referencedColumnName = "order_id", insertable = false, updatable = false)
-	@OnDelete(action = OnDeleteAction.CASCADE)
-	public order getOrder() {
-		return order;
-	}
 
-	public void setOrder(order order) {
-		this.order = order;
-	}
-
+	
 	@Column(name = "invoice_date", nullable = true)
 	public Date getInvoiceDate() {
 		return invoiceDate;
@@ -74,15 +84,6 @@ public class invoice {
 		this.invoiceDate = invoiceDate;
 	}
 
-
-	@Column(name = "order_id", nullable = true)
-	public int getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
-	}
 
 
 	@Id

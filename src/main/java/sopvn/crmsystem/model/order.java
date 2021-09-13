@@ -1,7 +1,5 @@
 package sopvn.crmsystem.model;
 
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.OnDelete;
@@ -21,7 +18,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "order")
+@Table(name = "`order`")
 @EntityListeners(AuditingEntityListener.class)
 public class order {
 	private int order_id;
@@ -31,20 +28,46 @@ public class order {
 	private int quantity;
 	private double total;
 	private boolean orderStatus;
+	private int invoiceId;
+	
+
+	public order(int i) {
+		order_id = i;
+	}
+	public order()
+	{
+		
+	}
+
+	@Column(name = "invoice_id", nullable = true)
+	public int getInvoiceId() {
+		return invoiceId;
+	}
+
+	public void setInvoiceId(int invoiceId) {
+		this.invoiceId = invoiceId;
+	}
+
 	
 	private account account;
 	private product product;
-	private List<invoice> invoice;
-	
+	private invoice invoice;
+
 	//join invoice
-	@OneToMany(mappedBy="order")
-	public List<invoice> getInvoice() {
+	@JsonIgnore
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "invoice_id", referencedColumnName = "invoice_id", insertable = false, updatable = false)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	public invoice getInvoice() {
 		return invoice;
 	}
 
-	public void setInvoice(List<invoice> invoice) {
+	public void setInvoice(invoice invoice) {
 		this.invoice = invoice;
 	}
+
+	
+
 	
 	//join product
 	@JsonIgnore

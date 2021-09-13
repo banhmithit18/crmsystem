@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,6 +31,18 @@ public class product {
 	private int productQuantity;
 	private boolean productStatus;
 	private int quoteId;
+	private float productPrice;
+	
+
+	@Column(name = "product_price", nullable = true)
+	public float getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(float productPrice) {
+		this.productPrice = productPrice;
+	}
+
 	
 	private List<order> order;
 	private quote quote;
@@ -48,7 +61,7 @@ public class product {
 	}
 
 	//join order
-	@OneToMany(mappedBy="product")
+	@OneToMany(mappedBy="product",fetch = FetchType.EAGER )
 	public List<order> getOrder() {
 		return order;
 	}

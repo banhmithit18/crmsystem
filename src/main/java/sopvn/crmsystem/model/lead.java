@@ -1,10 +1,12 @@
 package sopvn.crmsystem.model;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,31 +27,41 @@ public class lead {
 	private String leadPhone;
 	
 	List<opportunitylead> opportunitylead;
-	List<campaignmember> campaignmember;
-	List<account> account;
+	Set<campaignmember> campaignmember;
+	Set<account> account;
 		
+
+
+	public lead(int i) {
+		lead_id = i;
+	}
+	public lead() {
+		
+	}
+
 	//join account
-	@OneToMany(mappedBy="lead")
-	public List<account> getAccount() {
+	@OneToMany(mappedBy="lead",fetch = FetchType.EAGER)
+	public Set<account> getAccount() {
 		return account;
 	}
 
-	public void setAccount(List<account> account) {
+	public void setAccount(Set<account> account) {
 		this.account = account;
 	}
 
 	//join campaignmember
-	@OneToMany(mappedBy="lead")
-	public List<campaignmember> getCampaignmember() {
+	
+	@OneToMany(mappedBy="lead",fetch = FetchType.EAGER)
+	public Set<campaignmember> getCampaignmember() {
 		return campaignmember;
 	}
 
-	public void setCampaignmember(List<campaignmember> campaignmember) {
+	public void setCampaignmember(Set<campaignmember> campaignmember) {
 		this.campaignmember = campaignmember;
 	}
 	
 	//join opportunity lead
-	@OneToMany(mappedBy = "lead")
+	@OneToMany(mappedBy = "lead", fetch = FetchType.EAGER)
 	public List<opportunitylead> getOpportunitylead() {
 		return opportunitylead;
 	}

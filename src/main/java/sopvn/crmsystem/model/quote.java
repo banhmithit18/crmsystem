@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Entity
 @Table(name = "quote")
 @EntityListeners(AuditingEntityListener.class)
+
 public class quote {
 	private int quote_id;
 	private String quoteName;
@@ -24,7 +26,7 @@ public class quote {
 	List<product> product;
 	
 	//join product;
-	@OneToMany(mappedBy="quote")
+	@OneToMany(mappedBy="quote",fetch = FetchType.EAGER)
 	public List<product> getProduct() {
 		return product;
 	}

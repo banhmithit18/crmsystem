@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class competitor {
 	List<opportunitycompetitor> opportunitycompetitor;
 	
 	//join opportunitycompetitor
-	@OneToMany(mappedBy = "competitor")
+	@OneToMany(mappedBy = "competitor",fetch = FetchType.EAGER)
 	public List<opportunitycompetitor> getOpportunitycompetitor() {
 		return opportunitycompetitor;
 	}

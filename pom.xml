@@ -70,11 +70,11 @@
 		</dependency>
 
 		<!-- JDBC SQL Server -->
-			<!-- <dependency>
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>mssql-jdbc</artifactId>
-				<scope>compile</scope>
-			</dependency> -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<scope>compile</scope>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
 		<dependency>
@@ -84,12 +84,12 @@
 		</dependency>
 
 		<!-- JPA -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency> -->
-		
-		
+		</dependency>
+
+
 
 	</dependencies>
 

@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 
 @Table(name = "opportunity")
@@ -28,6 +30,7 @@ public class opportunity {
 	
 	//join campaign
 	@OneToMany(mappedBy = "opportunity")
+	@JsonIgnore
 	public List<campaign> getCampaign() {
 		return campaign;
 	}
@@ -38,6 +41,7 @@ public class opportunity {
 	
 	//join opportunitycompetitor
 	@OneToMany(mappedBy = "opportunity")
+	@JsonIgnore
 	public List<opportunitycompetitor> getOpportunitycompetitor() {
 		return opportunitycompetitor;
 	}
@@ -48,6 +52,7 @@ public class opportunity {
 	
 	//join opportunitylead
 	@OneToMany(mappedBy = "opportunity")
+	@JsonIgnore
 	public List<opportunitylead> getOpportunitylead() {
 		return opportunitylead;
 	}
