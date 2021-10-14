@@ -136,7 +136,7 @@
 						</a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="#">Marketing List</a></li>
+								<li><a class="dropdown-item" href="/marketing">Marketing List</a></li>
 								<li><a class="dropdown-item" href="#">Campaigns</a></li>
 							</ul></li>
 						<li class="nav-item dropdown"><a

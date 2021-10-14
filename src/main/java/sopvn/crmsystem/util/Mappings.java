@@ -48,10 +48,13 @@ public class Mappings {
 	public static final String ACCOUNT_MANAGEMENT ="/account";
 	public static final String ACCOUNT_EDIT = "/AccountEdit";
 	public static final String ACCOUNT_DELETE ="/AccountDelete";
+	public static final String ACCOUNT_EMAIL ="/SendEmail";
 	//contact
 	public static final String CONTACT_MANAGEMENT = "/contact";
 	public static final String CONTACT_CREATE ="/ContactCreate";
 	public static final String CONTACT_DELETE ="/ContactDelete";
 	public static final String CONTACT_EDIT ="/ContactEdit";
 	public static final String CONTACT_PROMOTION = "/ContactPromotion";
+	//marketing list
+	public static final String MARRKETING_MANAGEMENT ="/marketing";
 }
