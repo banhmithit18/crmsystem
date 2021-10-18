@@ -30,7 +30,6 @@ public class invoice {
 	
 	private List<order> order;
 	private List<cases> cases;
-	private List<servicecalendar> servicecalendar;
 	
 	
 	public invoice(Date date)
@@ -62,15 +61,6 @@ public class invoice {
 
 	public void setCases(List<cases> cases) {
 		this.cases = cases;
-	}
-	//join servicecalendar
-	@OneToMany(mappedBy="invoice")
-	public List<servicecalendar> getServicecalendar() {
-		return servicecalendar;
-	}
-
-	public void setServicecalendar(List<servicecalendar> servicecalendar) {
-		this.servicecalendar = servicecalendar;
 	}
 
 

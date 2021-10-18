@@ -24,9 +24,11 @@ $(document).ready(function() {
 			cache: false,
 			timeout: 600000,
 			success: function(data) {
-				
+					$('#emailContent').val("");
+					$('#emailSubject').val("");				
 					var dataError = '<div class="alert alert-success alert-dismissible fade show" role="alert"> <strong>Success!</strong> Email Sent! <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 					$('#emailError').append(dataError)
+					
 				
 			}
 		})

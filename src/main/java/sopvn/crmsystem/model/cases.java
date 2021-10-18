@@ -1,14 +1,18 @@
 package sopvn.crmsystem.model;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.OnDelete;
@@ -28,8 +32,21 @@ public class cases {
 	private int invoiceId;
 	private int userId;
 	
-	private invoice invoice;
 	
+	private List<servicecalendar> servicecalendar;
+	
+	//join service calendar
+		@OneToMany(mappedBy="cases", fetch = FetchType.EAGER)
+		public List<servicecalendar> getServicecalendar() {
+			return servicecalendar;
+		}
+
+		public void setServicecalendar(List<servicecalendar> servicecalendar) {
+			this.servicecalendar = servicecalendar;
+		}
+
+	
+	private invoice invoice;	
 	//join invoice
 	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL)

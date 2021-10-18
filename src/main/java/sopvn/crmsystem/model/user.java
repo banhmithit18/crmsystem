@@ -1,10 +1,12 @@
 package sopvn.crmsystem.model;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,7 +15,7 @@ import javax.persistence.Table;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "user")
+@Table(name = "employee")
 @EntityListeners(AuditingEntityListener.class)
 public class user {
 	private int user_id;
@@ -25,11 +27,24 @@ public class user {
 	private String password;
 	private String userType;
 	private boolean userStatus;
-	
+
+	// join service calendar
+	private Set<servicecalendar> servicecalendar;
+
+	// join service calendar
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	public Set<servicecalendar> getServicecalendar() {
+		return servicecalendar;
+	}
+
+	public void setServicecalendar(Set<servicecalendar> servicecalendar) {
+		this.servicecalendar = servicecalendar;
+	}
+
 	private List<contract> contract;
-	
-	//join user;
-	@OneToMany(mappedBy="user")
+
+	// join contract;
+	@OneToMany(mappedBy = "user")
 	public List<contract> getContract() {
 		return contract;
 	}
@@ -47,7 +62,6 @@ public class user {
 		this.userStatus = userStatus;
 	}
 
-
 	@Column(name = "user_type", nullable = true)
 	public String getUserType() {
 		return userType;
@@ -56,7 +70,6 @@ public class user {
 	public void setUserType(String userType) {
 		this.userType = userType;
 	}
-
 
 	@Column(name = "password", nullable = true)
 	public String getPassword() {
@@ -67,7 +80,6 @@ public class user {
 		this.password = password;
 	}
 
-
 	@Column(name = "username", nullable = true)
 	public String getUsername() {
 		return username;
@@ -76,7 +88,6 @@ public class user {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
 
 	@Column(name = "user_address", nullable = true)
 	public String getUserAddress() {
@@ -87,7 +98,6 @@ public class user {
 		this.userAddress = userAddress;
 	}
 
-
 	@Column(name = "user_email", nullable = true)
 	public String getUserEmail() {
 		return userEmail;
@@ -96,7 +106,6 @@ public class user {
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
-
 
 	@Column(name = "user_phone", nullable = true)
 	public String getUserPhone() {
@@ -107,7 +116,6 @@ public class user {
 		this.userPhone = userPhone;
 	}
 
-
 	@Column(name = "user_fullname", nullable = true)
 	public String getUserFullname() {
 		return userFullname;
@@ -116,7 +124,6 @@ public class user {
 	public void setUserFullname(String userFullname) {
 		this.userFullname = userFullname;
 	}
-
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -129,4 +136,3 @@ public class user {
 	}
 
 }
-

@@ -68,6 +68,7 @@
 										<th scope="col">Quantity</th>
 										<th scope="col">Total</th>
 										<th scope="col">Order Date</th>
+										<th scope="col">Invoice Id</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -79,6 +80,7 @@
 											<td>${item.quantity }</td>
 											<td>${item.total}</td>
 											<td>${item.invoice.invoiceDate}</td>
+											<td>${item.invoice.invoice_id}</td>
 										</tr>
 									</c:forEach>
 								</tbody>

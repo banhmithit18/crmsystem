@@ -57,4 +57,13 @@ public class Mappings {
 	public static final String CONTACT_PROMOTION = "/ContactPromotion";
 	//marketing list
 	public static final String MARRKETING_MANAGEMENT ="/marketing";
+	//case
+	public static final String CASE_MANAGEMENT ="/CaseManagement";
+	public static final String CASE_CREATE ="/CaseCreate";
+	public static final String CASE_EDIT ="/CaseEdit";
+	public static final String CASE_DELETE ="/CaseDelete";
+	// service calendar
+	public static final String SERVICE_CALENDAR_CREATE ="/ServiceCalendarCreate";
+	public static final String SERVICE_CALENDAR_TALBE = "/ServiceCalendarTable";
+	public static final String SERVICE_CALENDAR_DELETE ="/ServiceCalendarDelete";
 }

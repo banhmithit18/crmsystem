@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,22 +28,38 @@ public class servicecalendar {
 	private int userId;
 	private String serviceName;
 	private String serviceDetail;
-	private int invoiceId;
+	private int caseId;
 	private Date assignedDate;
 	
-	private invoice invoice;
 	
-	//join invoice
+	//join user
+	private user user;
 	@JsonIgnore
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "invoice_id", referencedColumnName = "invoice_id", insertable = false, updatable = false)
+	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_id", referencedColumnName = "user_id", insertable = true, updatable = true)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	public invoice getInvoice() {
-		return invoice;
+	public user getUser() {
+		return user;
 	}
 
-	public void setInvoice(invoice invoice) {
-		this.invoice = invoice;
+	public void setUser(user user) {
+		this.user = user;
+	}
+	
+	
+	private cases cases;
+	
+	//join case
+	@JsonIgnore
+	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name = "case_id", referencedColumnName = "case_id", insertable = true, updatable = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	public cases getCases() {
+		return cases;
+	}
+
+	public void setCases(cases cases) {
+		this.cases = cases;
 	}
 
 	@Column(name = "assigned_date", nullable = true)
@@ -55,13 +72,13 @@ public class servicecalendar {
 	}
 
 
-	@Column(name = "invoice_id", nullable = true)
-	public int getInvoiceId() {
-		return invoiceId;
+	@Column(name = "case_id", nullable = true,insertable = false, updatable = false)
+	public int getCaseId() {
+		return caseId;
 	}
 
-	public void setInvoiceId(int invoiceId) {
-		this.invoiceId = invoiceId;
+	public void setCaseId(int caseId) {
+		this.caseId = caseId;
 	}
 
 
@@ -85,7 +102,7 @@ public class servicecalendar {
 	}
 
 
-	@Column(name = "user_id", nullable = true)
+	@Column(name = "user_id", nullable = true ,insertable = false, updatable = false)
 	public int getUserId() {
 		return userId;
 	}
@@ -104,6 +121,7 @@ public class servicecalendar {
 	public void setServicecalendar_id(int id) {
 		this.servicecalendar_id = id;
 	}
+	
 
 }
 

@@ -165,6 +165,7 @@
 <script type="text/javascript" src="/assets/ajax/ajax-account.js"></script>
 <script type="text/javascript" src="/assets/ajax/ajax-contact.js"></script>
 <script type="text/javascript" src="/assets/ajax/ajax-email.js"></script>
+<script type="text/javascript" src="/assets/ajax/ajax-case.js"></script>
 
 
 

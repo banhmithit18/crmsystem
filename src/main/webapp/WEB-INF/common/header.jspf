@@ -126,7 +126,6 @@
 								<li><a class="dropdown-item" href="/product">Products</a></li>
 								<li><a class="dropdown-item" href="/quote">Quotes</a></li>
 								<li><a class="dropdown-item" href="/order">Orders</a></li>
-								<li><a class="dropdown-item" href="/invoice">Invoices</a></li>
 							</ul></li>
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#"
@@ -137,7 +136,6 @@
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" href="/marketing">Marketing List</a></li>
-								<li><a class="dropdown-item" href="#">Campaigns</a></li>
 							</ul></li>
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#"
@@ -147,13 +145,7 @@
 						</a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="#">Cases</a></li>
-								<li><a class="dropdown-item" href="#">Knowledge Base</a></li>
-								<li><a class="dropdown-item" href="#">Contracts</a></li>
-								<li><a class="dropdown-item" href="#">Resources and
-										Resource Groups</a></li>
-								<li><a class="dropdown-item" href="#">Services</a></li>
-								<li><a class="dropdown-item" href="#">Service Calendar</a></li>
+								<li><a class="dropdown-item" href="/CaseManagement">Cases</a></li>
 							</ul></li>
 					</ul>
 				</div>

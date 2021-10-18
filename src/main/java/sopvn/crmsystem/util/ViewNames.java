@@ -19,5 +19,8 @@ public final  class ViewNames {
 	public static final String CONTACT_MANAGEMENT ="sales-contact";
 	//marketing
 	public static final String MARKETING_MANAGEMENT= "marketing";
-
+	//case
+	public static final String CASE_MANAGEMENT ="case";
+	//service calendar
+	public static final String SERVICE_CALENDAR_MANAGEMENT ="service-calendar";
 }
